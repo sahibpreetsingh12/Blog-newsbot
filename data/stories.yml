@@ -1,0 +1,52 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: happy path1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news_checker_germany
+  - action: action_hello_germany
+
+
+- story: happy path2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news_checker_usa
+  - action: action_hello_usa
+
+- story: Crypto-path1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: crypto-section
+    - action: action_crypto-section
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
